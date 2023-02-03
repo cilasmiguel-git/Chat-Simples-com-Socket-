@@ -11,5 +11,14 @@
   "dependencies": {
     "express": "^4.18.1",
     "socket.io": "^4.5.1"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build && cp build/index.html build/404.html"
+  },
+  "homepage": "http://anuupadhyay.github.io/my-app", 
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
